@@ -1,5 +1,6 @@
 let mouseDown = false;
 let currentSize = 16;
+let globalColor = 'black';
 
 function setUpGlobalMouseListeners(){
     const container = document.querySelector('#container');
@@ -64,7 +65,7 @@ function changeGridSize(){
 }
 
 function changeColor(cell){
-    cell.style.backgroundColor = 'black';
+    cell.style.backgroundColor = globalColor;
 }
 
 function clearButtonPress(){
@@ -74,8 +75,20 @@ function clearButtonPress(){
     })
 }
 
+function eraseMode(){
+    var eraseCheck = document.querySelector("#erase");
+    eraseCheck.addEventListener('change', () => {
+        if(eraseCheck.checked == true){
+            globalColor = 'white';
+        }
+        else globalColor = 'black';
+    })
+    
+}
+
 setUpGlobalMouseListeners();
 createGrid(16);
 changeGridSize();
 clearButtonPress();
+eraseMode();
 

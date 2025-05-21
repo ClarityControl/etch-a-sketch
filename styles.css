@@ -34,7 +34,7 @@
     padding: 20px;
 }
 
-#clear{
+button{
     border-radius: 8px;
     color: white;
     background-color: black;
@@ -42,6 +42,12 @@
     font-size: 22px;
     padding: 10px 30px;
     cursor: pointer;
+}
+
+#erase-mode-container{
+    display: flex;
+    padding: 60px;
+    font-size: 22px;
 }
 
 #container{
