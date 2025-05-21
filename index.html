@@ -13,10 +13,18 @@
     </style>
 </head>
 <body>
+    <div class="title">Etch-a-sketch</div>
     <div class="parent">
-        <div class="title">Etch-a-sketch</div>
+        <div id="settings">            
+            <div id="gridSize">
+                <label>Grid size:</label>  
+                <input type="range" id="grid-input" min="16" max="64" step="1" value="16" autocomplete="off" />              
+                <label id="grid-label" for="grid-input">16x16</label>
+            </div>            
+            <button id="clear">Clear</button>
+        </div>
         <div id="container"></div>
-    </div>    
+    </div>
     <script src="app.js"></script>
 </body>
 </html>
