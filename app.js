@@ -21,8 +21,20 @@ function createGrid(size) {
   }
 }
 
-createGrid(16);
+function enableDrawing(){
+    const cells = document.querySelectorAll('.cell');
+    cells.forEach(cell => {
+        cell.addEventListener('mousedown', () => changeColor(cell))
+        cell.addEventListener('mouseover', () => {if(mouseDown) changeColor(cell)});
+    })
 
-function changeColor(square){
-    square.style.backgroundColor = 'black';
 }
+
+function changeColor(cell){
+    cell.style.backgroundColor = 'black';
+}
+
+createGrid(16);
+enableDrawing();
+
+
